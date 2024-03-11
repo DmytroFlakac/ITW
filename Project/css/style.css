@@ -1,0 +1,156 @@
+/*
+ * xtrifo00:
+ *
+ * Doplnte sve reseni.
+ *
+ * Nezapomente pridat strucne hromadne komentare pro pravidla jednotlivych sekci
+ * a pro netrivialni useky kodu.
+ *
+ * Snazte se dodat aspon castecne reseni, i snaha se hodnoti.
+ */
+ html, body {
+    height: 100vh;
+    width: 100vw;  
+ }
+ body {
+    margin: 0px;
+    background-image: url(../img/bg/bg-body.svg); 
+
+}
+
+header{
+    display: flex;
+	flex-direction: column-reverse;
+}
+
+ #header-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(../img/bg/bg-header.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 100vh;
+    z-index: -1;
+}
+
+#header-title span {
+    display: block; 
+    color: #fff;
+    text-shadow: 0 0 8px #43d72c;
+    transform: translate(0, 0);
+    visibility: visible;
+    transition: all 0.5s ease 0s;
+    opacity: 1;
+    position: relative;
+    left: 0;
+    top: -150px;
+}
+
+.scrolled #header-title span{
+    visibility: hidden;
+    transform: translate(0, 400px);
+    transition: all 0s ease 0s;
+    opacity: 0;
+}
+
+@font-face {
+    font-family: 'Textile';
+    src: url('../fonts/textile.ttf') format('truetype');
+}
+#header-title span:first-child {
+    font-family: 'Calistoga';
+    text-transform: uppercase;
+    font-size: 7vw;
+    margin-bottom: -2vw;
+}
+
+
+#header-title span:nth-child(2) {
+    font-family: 'Calistoga';
+    text-transform: uppercase;
+    font-size: 3.5vw;
+    margin-bottom: -1vw
+}
+
+#header-title span:nth-child(3) {
+    font-family: 'Calistoga';
+    text-transform: uppercase;
+    font-size: 1vw;
+
+}
+
+#header-title span:nth-child(2),
+#header-title span:nth-child(3) {
+    position: relative; 
+}
+
+#header-title span:last-child {
+    font-size: 2vw;
+    color: #fff;
+    font-family: 'Textile';
+    transition: all 0.3s ease 0.1s;
+}
+
+#header-title span:last-child::before{
+    content: "“";
+    display: inline-block; 
+}
+
+#header-title span:last-child::after{
+    content: "”";
+}
+
+
+#header-title span:nth-child(2)::before,
+#header-title span:nth-child(2)::after {
+    content: ''; 
+    text-shadow: 0 0 8px #43d72c;
+    display: inline-block; 
+    width: 4vw; 
+    height: 4vw; 
+    position: absolute; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+#header-title span:nth-child(2)::before {
+    background-image: url('../img/custom/flag.svg'); 
+    top: 10%; 
+    left: -4.5vw; 
+}
+
+#header-title span:nth-child(2)::after {
+    background-image: url('../img/custom/flag.svg'); 
+    transform: scaleX(-1); 
+    top: 10%; 
+    right: -4.5vw; 
+    
+}
+
+header {
+    background: url(../img/custom/beers.png);
+    background-position: 100% 75%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#header-menu {
+    background: white;
+    padding-top: 20vh;
+    z-index: -1;
+}
+
+@media  (max-width: 768px) {
+    #header-menu {
+        padding-top: 500px;
+    }
+}
+
+
+#heyoooo{
+    display: none;
+} 

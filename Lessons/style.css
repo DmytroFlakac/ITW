@@ -1,0 +1,251 @@
+header{
+    background-image: url("./icons/bg.jpg");
+    height: calc(500px - 75px);
+    background-repeat: repeat-x;
+    overflow:hidden;
+}
+.Content{
+    width: 960px;
+    margin: 0 auto;
+}
+.footerContent{
+    display: flex;
+	align-items: stretch;
+    width: 960px;
+    margin: 0 auto;
+}
+
+footer{
+    background-image: url("./icons/footer_bg.gif");
+    /* display: flex;
+	align-items: stretch; */
+}
+h1{
+    color: white;  
+    font-size: 50px; 
+    /* padding-left: 100px; */
+    padding-top: 20px;
+    margin: 0px;
+}
+h2{
+    color: rgb(202, 127, 15);
+    font-size: 20px;
+    /* margin-left: 100px;
+    margin-right: 100px; */
+    margin-top: 0px;
+}
+h3{
+    margin: 0px;
+    
+}
+.item-0 h3{ 
+    margin: 0px;
+    /* margin-left: 100px;
+    margin-right: 100px; */
+    border-bottom: #c15807 dotted  1px;
+}
+
+.item-1 .grid-item{
+    border-bottom: #c15807 dotted  1px;
+}
+
+body{
+    margin: 0; 
+}
+
+#div_top_hypers {
+    background-color:#ffffff;
+    display:inline;      
+}
+#ul_top_hypers li{
+    display: inline;
+   
+}
+nav a {
+    margin: 0px;
+    color: rgb(247, 246, 244);
+    background-color: transparent;
+    text-decoration: none;
+    padding: 10px;
+  }
+
+nav a:hover {
+    background-image: url("./icons/menu_bullet.gif");
+    background-repeat: no-repeat;
+    background-position: 50% 110%;
+  }
+
+nav ul{
+    position: absolute;
+    top: 145px;
+    min-width: 1000px;
+
+}
+
+img{   
+    margin: 0px;
+    width: 50px; /* Set a fixed width for the image */
+    height: 50px; /* Set a fixed height for the image */
+    margin-right: 20px;
+    object-fit: cover; /* Ensure the image covers the area without distortion */ 
+}
+
+header ul a{
+    color: rgb(255, 255, 255);
+    margin-left: -50px;
+    margin-right: 50px; 
+}
+
+footer li{
+    list-style-image:url("./icons/footer_list_bullet.gif");
+}
+
+
+a
+{
+    text-decoration: none;
+}
+
+footer a {
+    
+    color: #d1790e;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+h4{
+    margin: 0px;
+    color: white;
+    font-size: 20px;
+}
+
+
+section table {
+    border: 3px solid #000000;
+    /* margin-left: 100px; */
+    margin-bottom: 50px;
+  }
+  
+  section table tr th {
+    font-size: 15px;
+    color: #666565;
+    padding: 2px;
+    border-top: 2px dotted #a76c42;
+    border-left: 2px dotted #a76c42;
+    border-bottom: 2px solid #a76c42;
+    border-right: 2px solid #a76c42;
+    background-color: #d5a17c;
+  
+  }
+  
+  section table tr td {
+    font-size: 12px;
+    color: #666565;
+    padding: 2px;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #909090;
+  }
+
+  .container {
+	display: flex;
+	justify-content: space-around;
+	align-items: stretch;
+    /* flex-wrap: wrap; */
+    width: 960px;
+    margin: 0 auto;
+}
+
+.item-0 {
+    flex-basis: 60%;
+    flex-grow: 8;
+    width: 576px;
+    margin: 0 auto;
+}
+
+.item-1 {
+    flex-basis: 40%;
+    flex-grow: 8;
+    width: 384px;
+    margin: 0 auto;
+    padding-left: 30px;
+    background: linear-gradient(
+        to bottom right,
+        rgb(219, 219, 219),
+        rgb(255, 255, 255),
+        rgb(255, 255, 255))
+}
+
+.item-2 {
+	flex-basis: 30%;
+}
+
+.item-3 {
+	flex-basis: 40%;
+    margin-left: 30px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.grid-item {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically */
+    margin-bottom: 20px; 
+    margin-right: 30px; 
+}
+
+.grid-item div {
+    flex-grow: 1; /* Allow the text div to fill the remaining space */
+}
+
+/* Style the headings and paragraphs within each grid item as needed */
+.grid-item h3 {
+    margin: 0; /* Remove default margins from headings */
+    /* Additional styling */
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    color: white; /* Assuming the text is white */
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+
+  .row:last-child {
+    margin-bottom: 0;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    color: rgb(41, 16, 1); /* To ensure the links are also white */
+    text-decoration: none; /* Optional: removes the underline from links */
+  }
+
+  a:hover {
+    text-decoration: underline; /* Optional: adds underline on hover */
+  }
+
+  .rights {
+    text-align: center;
+    margin-top: 10px; /* Adds some space before the rights text */
+    font-size: 0.8em; /* Smaller text for the rights declaration */
+  }
+
+
