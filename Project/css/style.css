@@ -8,19 +8,22 @@
  *
  * Snazte se dodat aspon castecne reseni, i snaha se hodnoti.
  */
- html, body {
-    height: 100vh;
-    width: 100vw;  
- }
+ 
  body {
     margin: 0px;
     background-image: url(../img/bg/bg-body.svg); 
-
+    min-width: 768;
+    
 }
 
 header{
     display: flex;
 	flex-direction: column-reverse;
+    background: url(../img/custom/beers.png);
+    background-position: 100% 75%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    
 }
 
  #header-title {
@@ -32,7 +35,7 @@ header{
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: auto;
     height: 100vh;
     z-index: -1;
 }
@@ -42,18 +45,17 @@ header{
     color: #fff;
     text-shadow: 0 0 8px #43d72c;
     transform: translate(0, 0);
-    visibility: visible;
-    transition: all 0.5s ease 0s;
-    opacity: 1;
+    visibility: visible; /* Initially visible */
+    opacity: 1; /* Fully opaque */
     position: relative;
     left: 0;
     top: -150px;
+    transition: opacity 0.5s ease, visibility 0s linear 0.5s, transform 0.5s ease; /* Added transition for opacity and delayed visibility */
 }
 
-.scrolled #header-title span{
-    visibility: hidden;
+.scrolled #header-title span {
+    visibility: hidden; 
     transform: translate(0, 400px);
-    transition: all 0s ease 0s;
     opacity: 0;
 }
 
@@ -66,6 +68,7 @@ header{
     text-transform: uppercase;
     font-size: 7vw;
     margin-bottom: -2vw;
+    transition: all 0.5s ease 0.1s;
 }
 
 
@@ -73,13 +76,15 @@ header{
     font-family: 'Calistoga';
     text-transform: uppercase;
     font-size: 3.5vw;
-    margin-bottom: -1vw
+    margin-bottom: -1vw;
+    transition: all 0.5s ease 0.2s;
 }
 
 #header-title span:nth-child(3) {
     font-family: 'Calistoga';
     text-transform: uppercase;
     font-size: 1vw;
+    transition: all 0.5s ease 0.3s;
 
 }
 
@@ -92,7 +97,23 @@ header{
     font-size: 2vw;
     color: #fff;
     font-family: 'Textile';
-    transition: all 0.3s ease 0.1s;
+    transition: all 0.5s ease 0.4s;
+}
+
+.scrolled #header-title span:first-child {
+    transition-delay: 0.4s; /* Last to disappear */
+}
+
+.scrolled #header-title span:nth-child(2) {
+    transition-delay: 0.3s;
+}
+
+.scrolled #header-title span:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.scrolled #header-title span:last-child {
+    transition-delay: 0.1s; /* First to disappear */
 }
 
 #header-title span:last-child::before{
@@ -131,24 +152,74 @@ header{
     
 }
 
-header {
-    background: url(../img/custom/beers.png);
-    background-position: 100% 75%;
-    background-repeat: no-repeat;
-    background-size: contain;
+imge {
+    max-width: 1200px;
 }
 
 #header-menu {
     background: white;
     padding-top: 20vh;
+    height: 30vh;
+    width: 1200px;
+    align-self: center;
+    border-left: #43d72c 1px dotted;
+    border-right: #43d72c 1px dotted;
     z-index: -1;
 }
 
-@media  (max-width: 768px) {
+/* nav {
+    background-image: url(../img/custom/leaf.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40px;
+    height: 100px;
+    align-self: center;
+} */
+
+#header-menu ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin: 50px;
+    padding: 10px;
+    list-style: none;
+    text-align: center;
+    border-bottom: #43d72c 1px dotted;
+    border-top: #43d72c 1px dotted;
+
+}
+
+#header-menu ul li {
+    font-family: 'Calistoga';
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 10px;
+}
+
+#header-menu ul li a {
+    color: #201402;
+    text-decoration: none;
+}
+    
+#header-menu li:nth-child(3)::after {
+    content: ''; 
+    display: inline-block; 
+    width: 2.5vw; 
+    height: 3.5vw; 
+    position: absolute; 
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-image: url('../img/custom/leaf.svg'); 
+    left: 49%;
+    margin-top: -1vw;
+    transform: rotate(90deg) scaleX(-1);
+}
+
+
+/* @media  (max-width: 768px) {
     #header-menu {
         padding-top: 500px;
     }
-}
+} */
 
 
 #heyoooo{
