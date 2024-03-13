@@ -8,24 +8,32 @@
  *
  * Snazte se dodat aspon castecne reseni, i snaha se hodnoti.
  */
- 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+  body, html {
+    width: 100%;
+    height: 100%;
+  }
+
  body {
     margin: 0px;
     background-image: url(../img/bg/bg-body.svg); 
     min-width: 768;
-    
+    overflow-x: hidden;
 }
 
 header{
     display: flex;
 	flex-direction: column-reverse;
     background: url(../img/custom/beers.png);
-    background-position: 100% 75%;
+    background-position: 100% calc(95% - 150px);
+    min-width: 768px;
     background-repeat: no-repeat;
-    background-size: auto;
-    
+    background-size: auto;   
 }
-
  #header-title {
     display: flex;
     flex-direction: column;
@@ -35,9 +43,13 @@ header{
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
+    min-width: 768px;
     height: 100vh;
     z-index: -1;
+}
+img {
+    max-width: 100%;
 }
 
 #header-title span {
@@ -62,6 +74,11 @@ header{
 @font-face {
     font-family: 'Textile';
     src: url('../fonts/textile.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Font Awesome 6';
+    src: url('../fonts/fa-solid-900.ttf') format('truetype');
 }
 #header-title span:first-child {
     font-family: 'Calistoga';
@@ -152,14 +169,14 @@ header{
     
 }
 
-imge {
+image {
     max-width: 1200px;
 }
 
 #header-menu {
     background: white;
-    padding-top: 20vh;
-    height: 30vh;
+    padding-top: 90px;
+    height: 200px;
     width: 1200px;
     align-self: center;
     border-left: #43d72c 1px dotted;
@@ -169,7 +186,7 @@ imge {
 
 /* nav {
     background-image: url(../img/custom/leaf.svg);
-    background-position: center;
+    background-position: center;    
     background-repeat: no-repeat;
     background-size: 40px;
     height: 100px;
@@ -195,33 +212,153 @@ imge {
     padding: 10px;
 }
 
+#header-menu ul li:nth-child(3) {
+    margin-right: 70px;
+}
+#header-menu ul li:nth-child(4) {
+    margin-left: 70px;
+}
+
 #header-menu ul li a {
     color: #201402;
     text-decoration: none;
 }
-    
-#header-menu li:nth-child(3)::after {
+
+#header-menu li:nth-child(3) a::after {
     content: ''; 
     display: inline-block; 
-    width: 2.5vw; 
-    height: 3.5vw; 
+    width: 40px; 
+    height: 55px; 
     position: absolute; 
     background-size: cover; 
     background-repeat: no-repeat;
     background-image: url('../img/custom/leaf.svg'); 
-    left: 49%;
-    margin-top: -1vw;
+    margin-top: -15px;
+    margin-left: 70px;
     transform: rotate(90deg) scaleX(-1);
 }
 
 
-/* @media  (max-width: 768px) {
-    #header-menu {
-        padding-top: 500px;
+@media  (max-width: 768px) {
+    body {
+        overflow-x: scroll;
     }
-} */
+}
 
 
 #heyoooo{
     display: none;
 } 
+
+#about{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+    border-left: #43d72c 1px dotted;
+    border-right: #43d72c 1px dotted;
+    overflow: hidden; /* Ensures the pseudo-element doesn't overflow the container */
+    /* background-image: url('../img/custom/sprites.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1200px; */
+}
+
+#about::before {
+    content: "";
+    position: absolute;
+    top: 190px;
+    left: 150px;
+    width: 150px;
+    height: 100%;
+    background-image: url('../img/custom/sprites.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 40%;
+    transform: rotate(-45deg); /* Example: rotates the background image 45 degrees */
+    transform-origin: center; /* Ensures the rotation is around the center */
+}
+
+#about::after {
+    content: "";
+    position: absolute;
+    top: -300px;
+    left: 870px;
+    width: 150px; /* Set the width to half of the #about element or to the width of the sprite section */
+    height: 100%;
+    background-image: url('../img/custom/sprites.svg');
+    background-repeat: no-repeat;
+    background-position: left center; /* Align the left part of the image to the container */
+    background-size: auto 40%; /* Adjust the size accordingly */
+    transform: rotate(-45deg);
+    transform-origin: center;
+    
+}
+/* #about > * {
+    position: relative;
+    z-index: 1;
+} */
+#about ul{
+    content: '';
+    list-style: none;
+    margin-left: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top : 15px;
+    padding-bottom: 100px;
+
+}
+
+#about ul li a {
+    display: none;
+}
+
+#about ul li::before {
+    content: '';
+    font-family: 'Font Awesome 6 Free';
+    content: "\f005";
+    font-weight: 900;
+    color: #2ba518;
+    padding-left: 10px;
+}
+
+
+
+#about .heading {
+    padding-bottom: 20px;
+    padding-top: 50px;
+}
+
+#about video {
+    width: fit-content;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+}
+#about h2 {
+    font-family: 'Calistoga';
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #1f7301;
+    position: relative;
+}
+
+#about span {
+    font-family: 'Textile';
+    font-size: 25px;
+    color: #292929;
+    position: relative;
+}
+
+#about .name{
+    font-family: 'Calistoga';
+    font-size: 16px;
+    color: #292929;
+    margin-left: 430px;
+}
+
+
+
+  
