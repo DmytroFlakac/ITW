@@ -1276,6 +1276,17 @@ button.fullscreen:before {
     color: #ffffff;
 }
 
+#services table td:nth-child(2):before{
+    content: "\24"; 
+    font-family: "Font Awesome 6 Free"; 
+    font-size: 20px; 
+    visibility: visible;
+}
+
+#services table tr:nth-child(8) td:nth-child(2):before{
+    display: none;
+}
+
 
 #services table th {
     padding: 20px;
@@ -1290,7 +1301,7 @@ button.fullscreen:before {
 
   
   #services a {
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
   }
 
