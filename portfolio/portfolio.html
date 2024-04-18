@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/theme-toggle.js" defer></script>
+  <script src="js/mobile-menu.js" defer></script>
+  <script src="js/active.js" defer></script>
+    <script src="js/redirection.js"></script>
+</head>
+<body>
+        <nav class="navbar">
+            <div class="menu-toggle" id="mobile-menu" >
+                <span class="fas fa-bars"></span> 
+                <span class="fas fa-times" style="display:none;"></span> 
+            </div>
+            <ul class="nav-list">
+                <li>
+                    <a href="index.html" >Home <i class="fas fa-home"></i></a>
+                </li>
+                <li>
+                    <a href="about.html">About <i class="fas fa-user"></i></a>
+                </li>
+                <li>
+                    <a class="active">Portfolio <i class="fas fa-briefcase"></i></a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact <i class="fas fa-envelope"></i></a>
+                </li>    
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
+                    <i class="fas fa-moon" id="moon-icon"></i>  
+                    <i class="fas fa-sun" id="sun-icon"></i>  
+            </button>  
+        </nav>
+
+    <div class="portfolio">
+        <section class="cards">
+        <!-- The card elements as seen in the uploaded image -->
+        <div class="card">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempora itaque accusamus...</p>
+            <button class="success">Success</button>
+        </div>
+        <!-- Repeat for as many cards as you want -->
+    </section>
+    </div>
+        <!-- More projects can be added similarly -->
+    </div>
+    <footer>
+        <!-- Similar Footer as in the other pages -->
+    </footer>
+</body>
+</html>

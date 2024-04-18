@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/theme-toggle.js" defer></script>
+    <script src="js/mobile-menu.js" defer></script>
+    <script src="js/redirection.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="fas fa-bars"></span> 
+            <span class="fas fa-times" style="display:none;"></span> 
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="index.html" >Home <i class="fas fa-home"></i></a>
+            </li>
+            <li>
+                <a class="active">About <i class="fas fa-user"></i></a>
+            </li>
+            <li>
+                <a href="portfolio.html">Portfolio <i class="fas fa-briefcase"></i></a>
+            </li>
+            <li>
+                <a href="contact.html">Contact <i class="fas fa-envelope"></i></a>
+            </li>    
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
+                <i class="fas fa-moon" id="moon-icon"></i>  
+                <i class="fas fa-sun" id="sun-icon"></i>  
+        </button>  
+    </nav>
+    <div class="education-section" id="education">
+        <h1>Qualification</h1>
+        <p>My personal journey</p>
+        <div class="timeline">
+            <div class="timeline-block left">
+                <h3>Computer Engineer</h3>
+                <p>Peru - University</p>
+                <span class="timeline-date">2009 - 2014</span>
+            </div>
+            <div class="timeline-block right">
+                <h3>Web Design</h3>
+                <p>Spain - Institute</p>
+                <span class="timeline-date">2014 - 2017</span>
+            </div>
+            <div class="timeline-block left">
+                <h3>Web Development</h3>
+                <p>Peru - Institute</p>
+                <span class="timeline-date">2017 - 2019</span>
+            </div>
+            <div class="timeline-block right">
+                <h3>Master in UI/UX</h3>
+                <p>Peru - Institute</p>
+                <span class="timeline-date">2019 - 2021</span>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <!-- Similar Footer as in the other pages -->
+    </footer>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/theme-toggle.js" defer></script>
+  <script src="js/mobile-menu.js" defer></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/active.js" defer></script>
+  <script src="js/send_message.js" defer></script>
+  
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="fas fa-bars"></span> 
+            <span class="fas fa-times" style="display:none;"></span> 
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="index.html" class="active">Home <i class="fas fa-home"></i></a>
+            </li>
+            <li>
+                <a href="about.html">About <i class="fas fa-user"></i></a>
+            </li>
+            <li>
+                <a href="portfolio.html">Portfolio <i class="fas fa-briefcase"></i></a>
+            </li>
+            <li>
+                <a href="contact.html">Contact <i class="fas fa-envelope"></i></a>
+            </li>    
+        </ul>
+        <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
+            <i class="fas fa-moon" id="moon-icon"></i>  
+            <i class="fas fa-sun" id="sun-icon"></i>  
+        </button>  
+    </nav>
+    
+
+    <div class="main">
+    
+        <div class="home" id="home">
+            <div class="content">
+            <section class="info">
+                <p> Hello, I'm Dmytro Trifonov. I'm a student of <a href="https://www.fit.vut.cz/.cs">FIT VUT</a>. </p>
+                <p>Glad to welcome you on my portfolio, here will be information about my training, work and possibly other additional information. So you will be able to download my cv and write me a letter. </p>
+            </section>
+            <section class="photo">
+                <img src="src/cv_photo.png" alt="Dmytro Trifonov" id="cv-photo">
+            </section>
+        </div>
+
+        <section class="about-section" id="about">
+            <img src="path_to_image.jpg" alt="Profile Photo" class="profile-photo">
+            <h1>About Me</h1>
+            <p>I'm Dmytro Trifonov, a student and developer based in [Location]. Here's a brief overview of who I am and what I do.</p>
+            <h2>Skills</h2>
+            <ul class="skill-list">
+                <li>HTML/CSS</li>
+                <li>JavaScript</li>
+                <li>Other skills...</li>
+            </ul>
+        </section>
+
+        <section class="portfolio" id="portfolio">
+            <h1>Portfolio</h1>
+            <div class="project">
+                <img src="path_to_project_image.jpg" alt="Project Image">
+                <div class="project-description">
+                    <h2>Project Title</h2>
+                    <p>Description of the project, what it was about, what technologies were used, etc.</p>
+                </div>
+            </div>
+            <!-- More projects can be added similarly -->
+        </section>
+
+        <section class="contact-form" id="contact">
+            <h1>Contact Me <i class="fas fa-paper-plane"></i></h1>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="ca95428a-3a6e-4fa1-88b0-a24f863b7b34">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+        
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+        
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+        
+              <button type="submit">Send Message <i class="fas fa-send"></i></button>
+            </form>
+            <div id="toast" class="toast-hidden">
+                <span id="toastMessage">Message sent successfully!</span>
+            </section>
+
+    </div>    
+        
+      </div>
+      <footer>
+        <div class="social-links">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/dimastkd" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <!-- Telegram -->
+            <a href="https://t.me/Dima@" target="_blank" title="Telegram">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/yourusername" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <!-- Discord -->
+            <a href="https://discordapp.com/users/dima8241" target="_blank" title="Discord">
+                <i class="fab fa-discord"></i>
+            </a>
+            <!-- Email -->
+            <a href="mailto:xtrifo00@vutbr.cz" title="Send me an email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        <span>&copy; 2024 Dmytro Trifonov</span>
+    </footer>
+    
+
+    </div>
+</body>
+</html>

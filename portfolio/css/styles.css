@@ -1,0 +1,608 @@
+:root {
+    --base-color: #252f39; /* Lighter Charcoal Gray */
+    --accent-color: #00BCD4; /* Subdued Cyan */
+    --neutral-color: #62757F; /* Blue-leaning Slate Gray */
+    --background-color: #1A1A1A; /* Almost Black */
+    --text-color: #ECEFF1; /* Off White */
+    --footer-color: #222;
+}
+
+.light-theme {
+    --base-color: #c3dbfc; /* Off White */
+    --accent-color: #00BCD4; /* Subdued Cyan */
+    --neutral-color: #B0BEC5; /* Light Gray with a bluish tint */
+    --background-color: #ECEFF1; /* Pale Silver */
+    --text-color: #333333; /* Dark Gray */
+    --footer-color: #d8eaf6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+nav.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    background-color: var(--base-color);
+}
+
+nav.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: var(--base-color);   
+    justify-content: center;
+    align-items: center;
+}
+
+nav.navbar li {
+    list-style: none;
+}
+
+
+nav.navbar a {
+    margin-top: 15px;
+    float:inline-start;
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+nav.navbar a:hover,
+nav.navbar a.active {
+    background-color: var(--background-color);
+    border-radius: 2rem  2rem 0 0;
+    position: relative;
+}
+
+nav.navbar a:hover{
+    color: var(--accent-color);
+    border-radius: 2rem  2rem 0 0;
+    position: relative;
+    transition: color 0.5s;
+}
+
+nav.navbar a.active {
+    color: var(--neutral-color);
+}
+
+
+nav.navbar a:hover::before,
+nav.navbar a:hover::after,
+nav.navbar a.active::before,
+nav.navbar a.active::after {
+    --border-radius: 1rem;
+    content: '';
+    position: absolute;
+    width: var(--border-radius);
+    height: var(--border-radius);
+    right: 0;
+}
+
+nav.navbar a:hover::before,
+nav.navbar a.active::before {
+    bottom: 0;
+    left: calc(var(--border-radius)*-1);
+    box-shadow: 3px 3px 0 3px var(--background-color);
+    border-radius: 0 0 100vh 0;
+}
+
+nav.navbar a:hover::after,
+nav.navbar a.active::after {
+    bottom: 0;
+    right: calc(var(--border-radius)*-1);
+    box-shadow: -3px 3px 0 3px var(--background-color);
+    border-radius: 0 0 0 100vh;
+}
+
+
+.theme-toggle{
+    margin: 20px;
+    padding: 10px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.theme-toggle:hover {
+    background-color: var(--text-color);
+    color: var(--base-color);
+    transition: all 0.5s, color 0.5s;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--accent-color)
+}
+
+.theme-toggle #moon-icon {
+    display: none;  
+}
+.theme-toggle #sun-icon {
+    display: block; 
+}
+
+body.light-theme #moon-icon {
+    display: block; 
+}
+body.light-theme #sun-icon {
+    display: none;  
+}
+
+
+
+/* Ensures icons inside buttons are sized appropriately */
+.theme-toggle.button i {
+    margin-right: 5px;  /* Space between icon and text, if any */
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.container h1 {
+    color: var(--accent-color);
+}
+
+/* Basic Styles */
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+.theme-toggle {
+    display: inline-block;
+}
+  
+  .content {
+    position: relative;
+    min-height: 350px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    padding-left: 5rem; 
+    padding-right: 5rem;
+  }
+  
+  .info {
+    max-width: 50%;
+  }
+  
+  .info h1 {
+    margin: 0;
+    color: #aaa; /* Lighter gray text */
+  }
+  
+  .info p {
+    font-size: 1.4rem;
+    margin-bottom: 1em; /* Adds space between paragraphs */
+    text-align: justify; /* Justifies the text */
+    text-justify: inter-word; /* Improves spacing when justifying text */
+  }
+  
+  .info a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .info a:hover {
+    text-decoration: underline;
+  }
+
+
+  .photo #cv-photo {
+    width: 28.5rem;
+    height: 44rem;
+  }
+
+  .photo {
+    width: 28.5rem;
+    height: 44rem;
+  }
+  
+.main .about-section {
+    display: none;
+}
+
+.main .portfolio {
+    display: none;
+}
+
+.main .contact-form {
+    display: none;
+} 
+  
+  footer {
+    width: 100%;
+    padding: 50px;
+    background: var(--footer-color);
+    text-align: center; /* Center the footer content */
+}
+
+footer .social-links {
+    margin-bottom: 20px; /* Space between icons and copyright text */
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    color: var(--text-color); /* Use the text color variable for icons */
+    font-size: 24px; /* Icon size */
+    text-decoration: none; /* No underlines on the icons */
+}
+
+footer .social-links a:hover {
+    color: var(--accent-color); /* Change color on hover */
+}
+
+footer span {
+    display: block; /* Makes the copyright text go on a new line */
+    color: var(--text-color);
+    margin-top: 20px; /* Space above the copyright text */
+}
+
+  
+  footer span {
+    color: var(--text-color);
+  }
+
+@media screen and (max-width: 900px) {
+    nav.navbar {
+        position: fixed;   
+        top: 0;            
+        left: 0;           
+        right: 0;          
+        z-index: 1;      
+        background-color: var(--base-color); /* Maintain the background color */
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;    
+        transition: all 0.5s;
+    }
+    nav.navbar .nav-list {
+        flex-direction: column;
+        width: 100%;
+        display: block;
+        overflow: hidden;
+        max-height: 0;  
+        opacity: 0;
+        transition: all 0.5s, background-color 0.0s;
+    }
+
+    nav.navbar .nav-list a {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+        width: 100%;
+        padding: 1rem 0;
+        padding-left: calc(50% - 100px);
+        padding-right: calc(50% - 100px);
+    }
+
+    .menu-toggle {
+        padding: 1.4rem;
+        display: block;
+        top: 0;
+        right: 0;
+        transition: all 0.5s;
+    }
+
+    .navbar.active .nav-list {
+        max-height: 30rem;  /* Expand the menu */
+        opacity: 1;  /* Make it fully visible */
+    }
+
+    .fa-bars, .fa-times {
+        display: block;  /* Ensure both icons are block to toggle visibility */
+    }
+
+    .fa-times {
+        display: none;  /* Hide close icon initially */
+    }
+
+    .navbar.active .fa-bars {
+        display: none;  /* Hide menu icon when navbar is active */
+    }
+
+    .navbar.active .fa-times {
+        display: block;  /* Show close icon when navbar is active */
+    }
+
+    /* Override hover and active styles on mobile */
+    nav.navbar a:hover,
+    nav.navbar a.active {
+        background-color: transparent;  /* Neutral background color */
+        border-radius: 0;  /* Remove rounded borders */
+    }
+
+    nav.navbar a:hover::before,
+    nav.navbar a:hover::after,
+    nav.navbar a.active::before,
+    nav.navbar a.active::after {
+        content: none;  /* Remove pseudo-elements */
+    }
+
+    .content {
+        min-height: 33.8rem;
+    }
+
+    .photo #cv-photo {
+        width: 10rem;
+        height: 16rem;
+        border-radius: 10%;
+        box-shadow: 0 0 20px var(--accent-color);
+    }
+    
+    .photo {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 10rem;
+    height: 16rem;
+    }
+
+    .info {
+        padding-right: 5rem;
+        position: absolute;
+        top: 17%;
+    }
+
+    .info p {
+        font-size: 1.2rem;
+    }
+
+    .main .about-section {
+        display: block;
+    }
+    
+    .main .portfolio {
+        display: block;
+    }
+    
+    .main .contact-form {
+        display: block;
+       min-height: 600px;   
+    } 
+
+
+}
+
+.contact-form { 
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+    padding-top: 15vh;
+    border-radius: 8px;
+    width: 60%;
+    margin: 0 auto;
+    height: 91vh;
+    min-height: 450px;
+}
+
+.contact-form h1 {
+    color: var(--accent-color);
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: var(--neutral-color);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--neutral-color);
+    border-radius: 20px;
+    width: 100%;
+    background-color: var(--base-color);
+    color: var(--text-color);
+}
+.contact-form textarea {
+    height: auto; /* Allows the height to adjust based on content up to a max height */
+    height: 200px; /* You can adjust this value based on your design needs */
+    resize: none; /* Disables manual resizing */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--neutral-color);
+    border-radius: 20px;
+    width: 100%;
+    background-color: var(--base-color);
+    color: var(--text-color);
+}
+
+
+.contact-form button {
+    padding: 10px;
+    background-color: var(--accent-color);
+    color: var(--base-color);
+    border: none;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: var(--neutral-color);
+}
+
+#toast {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    background-color: lightgreen;
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
+}
+
+#toast i {
+    margin-right: 10px;
+}
+
+/* Additional CSS for About and Portfolio pages */
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.project {
+    margin-bottom: 30px;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+}
+
+.project-description {
+    margin-top: 10px;
+}
+
+
+
+.education-section {
+    background-color: #1f1f1f; /* Match to your site's theme */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.timeline {
+    position: relative;
+    padding: 20px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background-color: #6f6f6f;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.timeline-block {
+    margin-bottom: 30px;
+    position: relative;
+    width: 40%; /* Adjust as needed */
+    display: inline-block;
+    vertical-align: top;
+}
+
+.timeline-block h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.timeline-block p {
+    margin: 5px 0;
+}
+
+.timeline-block .timeline-date {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.left {
+    float: left;
+    clear: both;
+    text-align: right;
+    padding-right: 30px; /* Spacing for text from the line */
+}
+
+.right {
+    float: right;
+    clear: both;
+    text-align: left;
+    padding-left: 30px; /* Spacing for text from the line */
+}
+
+/* Add styling for circles on the timeline */
+.timeline-block::before {
+    content: '';
+    position: absolute;
+    top: 20px; /* Center vertically with the text */
+    left: calc(50% - 6px); /* Adjust based on the size of the circle */
+    width: 12px;
+    height: 12px;
+    border: 2px solid #6f6f6f;
+    background-color: #1f1f1f;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.left .timeline-block::before { right: calc(-50% - 6px); left: auto; }
+.right .timeline-block::before { left: calc(50% - 6px); }
